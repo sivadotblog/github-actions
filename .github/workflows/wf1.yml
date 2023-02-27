@@ -1,0 +1,11 @@
+#github actions to echo hello world
+name: master
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello world action step
+        run: echo "Hello World"
+        shell: bash
