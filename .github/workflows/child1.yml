@@ -1,0 +1,12 @@
+#github action to echo hello world only after master.yml completed
+name: child1
+on: [push]
+jobs:
+  child1-job:
+    needs: master
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello world action step
+        run: echo "Hello World"
+        shell: bash

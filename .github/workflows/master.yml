@@ -2,7 +2,7 @@
 name: master
 on: [push]
 jobs:
-  build:
+  master-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
